@@ -45,7 +45,7 @@ def interact(env, agent, num_episodes=20000, window=100):
                 # save final sampled reward
                 samp_rewards.append(samp_reward)
                 break
-        if (i_episode >= 100):
+        if (i_episode >= window):
             # get average reward from last 100 episodes
             avg_reward = np.mean(samp_rewards)
             # append to deque
